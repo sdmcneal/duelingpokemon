@@ -12,14 +12,14 @@ def calc_effectiveness(attacker_type,defender_type):
 
 # create types for lookup later
 # POKEMON_TYPE[1]='Fire' for example
-POKEMON_TYPES= ['Normal','Fire','Water']
+POKEMON_TYPES= ['Normal','Fire','Water','Grass','Electric','Ice','Fighting','Poison','Ground','Flying','Psychic','Bug','Rock','Ghost','Dragon','Dark','Steel','Fairy']
 
 # create table or 'matrix'
 # find value by using MATCHUPS[r][c]
 # where r=row (starts with 0) and c=column (starts with 0)
-MATCHUPS = [ [1,1,1], #row 0 or Normal type attacker
-    [1,.5,.5],  # row 1 or Fire type
-    [1,2,.5]] # row 2 or Water type
+MATCHUPS = [ [1,1,1,1,1,1,1,1,1,1,1,1,.5,0,1,1,.5,1], #row 0 or Normal type attacker
+    [1,.5,.5,2,1,2,1,1,1,1,1,2,.5,1,.5,1,2,1],  # row 1 or Fire type
+    [1,2,.5,.5,1,1,1,1,2,1,1,1,2,1,.5,1,1,1]] # row 2 or Water type
 
 # display example attack effectiveness for Water attacking Fire
 attacker_type_index= POKEMON_TYPES.index('Water')
